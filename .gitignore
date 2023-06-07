@@ -1,3 +1,13 @@
+### ignore 忽略文件 ###
+.git
+logs
+target/
+rebel.xml
+!.mvn/wrapper/maven-wrapper.jar
+log.path_IS_UNDEFINED
+.DS_Store
+offline_user.md
+
 # Compiled class file
 *.class
 
@@ -9,6 +19,12 @@
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
+
+### idea ###
+.idea
+*.iml
+*.ipr
+*.iws
 
 # Package Files #
 *.jar
@@ -22,3 +38,20 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+#NetBeans##
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+generatorConfig.xml
