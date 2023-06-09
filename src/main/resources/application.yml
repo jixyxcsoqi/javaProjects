@@ -10,12 +10,15 @@ spring:
       url: jdbc:mysql://localhost:3306/reggie?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
       username: root
       password: 123456
-  # 配置成自己的
   redis:
     host: 127.0.0.1
     port: 6379
-#    password: 123456
+    #    password: 123456
     database: 0
+    # 注意cache是和redis同级，在spring下面，而非redis下面，缓存下面可以选择多种，这里指定的是redis
+    cache:
+      redis:
+        time-to-live: 1800000 #过期时间，默认毫秒，不写就是永久
 mybatis-plus:
   configuration:
     #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
@@ -26,5 +29,3 @@ mybatis-plus:
       id-type: ASSIGN_ID
 reggie:
   path: D:\img\
-
-
